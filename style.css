@@ -1,0 +1,467 @@
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* --ba : 2px solid rgb(255, 0, 0); */
+    --cb:  #4B6A9B;
+    --cbb: #141D2F;
+    --ff: "Space Mono",monospace;
+    --lm-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+}
+.main-container {
+    width: 100%;
+    height: 100%;
+    border: var(--ba);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cbb);
+
+}
+.container {
+    width: 40%;
+    height: 750px;
+    border:var(--ba);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.head {
+    width: 100%;
+    height: 70px;
+    border: var(--ba);
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+.heading {
+    font-size: 200%;
+    color: white;
+    font-family: var(--ff);
+}
+.theme-div {
+    position: relative;
+    width: 120px;
+    border: var(--ba);
+    cursor: pointer;
+    
+}
+.light-theme,.dark-theme {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.light {
+    font-size: 15px;
+    color: white;
+}
+.light-img,.dark-img {
+    width: 30px;
+    height: 30px;
+}
+.dark-theme {
+    visibility: hidden;
+}
+.dark {
+    font-size: 15px;
+    color: var(--cb);
+}
+
+.search-div {
+    width: 100%;
+    height: 50px;
+    border: var(--ba);
+    display: flex;
+    align-items: center;
+    background-color: #1E2A47;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 16px 30px -10px rgba(0, 0, 0, 0.2);
+}
+.search-img {
+    width: 20px;
+    height: 20px;
+    
+}
+.input-search {
+    width: 80%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    padding-left: 10px;
+}
+::placeholder{
+    color: rgba(126, 123, 123, 0.3);
+}
+.search-btn {
+    width: 20%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #0079FF;
+    color: white;
+    font-size: 20px;
+    border: none;
+    margin-right: 5px;
+}
+.profile-div {
+    width: 100%;
+    height: 500px;
+    border: var(--ba);
+    background-color: #1E2A47;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 16px 30px -10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.profile-pic-and-name-div{
+    width: 100%;
+    height: 150px;
+    border: var(--ba);
+    display: flex;
+}
+.profile-pic-div {
+    width: 150px;
+    height: 150px;
+    
+}
+.profile-pic-div img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.profile-pic {
+    width: 80%;
+    
+}
+.profile-name-div {
+    width: 80%;
+    height: 150px;
+    border: var(--ba);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+
+}
+.profile-name {
+    color: white    ;
+}
+.user-name {
+    color: #0079FF;
+}
+.join-date {
+    color: white;
+    margin-top: 10px;
+}
+.bio-div {
+    width:100%;
+    height: 100px;
+    color: white;
+    border: var(--ba);
+    padding-top: 15px;
+
+}
+.bio {
+    color: white;
+    padding-top: 13px;
+}
+.profile-detail {
+    background-color: var(--cbb);
+    width: 100%;
+    height: 100px;
+    border: var(--ba);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+}
+
+.repo-div ,.follower-div,.following-div{
+    width: 33.3%;
+    height: 100%;
+    border: var(--ba);
+    padding-left: 25px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.repo,.followers,.folowing {
+    font-size: 80%;
+}
+.repo-no,.followers-no,.following-no {
+    font-size: 170%;
+}
+
+.contact-div {
+    width: 100%;
+    height: 120px;
+    border: var(--ba);
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "l b"
+    "t c";
+    color: white;
+}
+.location-div,.twitter-div,.bio-link-div,.company-div {
+    display: flex;
+    align-items: center;
+}
+
+.location-name,.bio-link,.company-name,.twitter-link {
+    padding-left: 10px;
+}
+
+.bio-link {
+    color: white;
+}
+
+.twitter-link {
+    color: white;
+}
+
+
+
+@media (min-width:1200px) and (max-width:1400px){
+    .container{
+        width: 50%;
+    }
+}
+@media (min-width:900px) and (max-width:1200px){
+    .container{
+        width: 60%;
+    }
+    .profile-pic-div{
+        width: 130px;
+        height: 130px;
+    }
+}
+@media (min-width:700px) and (max-width:900px){
+    .container{
+        width: 70%;
+    }
+    .profile-pic-div{
+        width: 130px;
+        height: 130px;
+    }
+}
+@media (min-width:560px) and (max-width:700px){
+    .container{
+        width: 75%;
+    }
+    .profile-div{
+        height: 550px;
+    }
+    .profile-pic-div{
+        width: 130px;
+        height: 130px;
+    }
+    .contact-div{
+        height: 150px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,1fr);
+        gap: 15px;
+        grid-template-areas: "l"
+        "b"
+        "t"
+        "c";
+    }
+}
+@media (min-width:500px) and (max-width:560px){
+    .container{
+        width: 85%;
+    }
+    .profile-div{
+        height: 550px;
+    }
+    .profile-pic-div{
+        width: 130px;
+        height: 130px;
+    }
+    .contact-div{
+        height: 150px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,1fr);
+        gap: 15px;
+        grid-template-areas: "l"
+        "b"
+        "t"
+        "c";
+    }
+    .light-img,.dark-img {
+        width: 20px;
+        height: 20px;
+    }
+    .theme-div{
+        width: 90px;
+    }
+}
+@media (min-width:400px) and (max-width:500px){
+    .container{
+        width: 95%;
+    }
+    .theme-div{
+        width: 90px;
+    }
+    .light-img,.dark-img {
+        width: 20px;
+        height: 20px;
+    }
+    .search-btn{
+        font-size: 90%;
+    }
+    .profile-div{
+        height: 550px;
+    }
+    .profile-pic-div{
+        width: 130px;
+        height: 130px;
+    }
+    .contact-div{
+        height: 150px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,1fr);
+        gap: 15px;
+        grid-template-areas: "l"
+        "b"
+        "t"
+        "c";
+    }
+    .profile-name{
+        font-size: 140%;
+    }
+}
+@media (min-width:300px) and (max-width:400px){
+    .container{
+        width: 95%;
+        padding: 0px;
+    }
+    .heading{
+        font-size: 130%;
+    }
+    .theme-div{
+        width: 90px;
+    }
+    .light-img,.dark-img {
+        width: 20px;
+        height: 20px;
+    }
+    .input-search{
+        font-size: 80%;
+    }
+    .search-btn{
+        font-size: 60%;
+        width: 30%;
+    }
+    .profile-div{
+        height: 550px;
+    }
+    .profile-pic-div{
+        width: 100px;
+        height: 100px;
+    }
+    .contact-div{
+        height: 150px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,1fr);
+        gap: 15px;
+        grid-template-areas: "l"
+        "b"
+        "t"
+        "c";
+    }
+    .profile-name{
+        font-size: 100%;
+    }
+    .repo-div ,.follower-div,.following-div{
+        padding-left: 0px;
+    }
+    .bio-div{
+        padding-top: 0px;
+        height: 90px;
+        font-size: 80%;
+    }
+    .location-name,.bio-link,.company-name,.twitter-link{
+        font-size: 90%;
+    }
+    .profile-pic-and-name-div,.profile-name-div {
+        height: 120px;
+    }
+    
+}
+@media (min-width:200px) and (max-width:300px){
+    .container{
+        width: 95%;
+        height: 650px;
+        padding: 0px;
+    }
+    .heading{
+        font-size: 130%;
+    }
+    .search-div{
+        padding: 0px;
+    }
+    .theme-div{
+        width: 90px;
+    }
+    .light-img,.dark-img {
+        width: 20px;
+        height: 20px;
+    }
+    .input-search{
+        font-size: 80%;
+    }
+    .search-btn{
+        font-size: 60%;
+        width: 30%;
+    }
+    .profile-div{
+        height: 490px;
+        padding: 0px;
+    }
+    .profile-pic-div{
+        width: 100px;
+        height: 100px;
+    }
+    .contact-div{
+        height: 150px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,1fr);
+        gap: 15px;
+        grid-template-areas: "l"
+        "b"
+        "t"
+        "c";
+    }
+    .profile-name{
+        font-size: 100%;
+    }
+    .repo-div ,.follower-div,.following-div{
+        padding-left: 0px;
+    }
+    .bio-div{
+        padding-top: 0px;
+        height: 90px;
+        font-size: 80%;
+    }
+    .location-name,.bio-link,.company-name,.twitter-link{
+        font-size: 90%;
+    }
+    .profile-pic-and-name-div,.profile-name-div {
+        height: 120px;
+    }
+    
+}

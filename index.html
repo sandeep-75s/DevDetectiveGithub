@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Detective</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="image/research.png" type="image/weather-forecast.png" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <div class="head">
+                <h1 class="heading">DevDetective</h1>
+                <div class="theme-div" onclick="">
+                    <div class="light-theme" onclick="changeTheme()">
+                        <h4 class="light">LIGHT</h4>
+                        <img src="image/brightness.png" alt="" class="light-img">
+                    </div>
+                    <div class="dark-theme" onclick="changeTheme()">
+                        <h4 class="dark">DARK</h4>
+                        <img class="dark-img" src="image/night-mode.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="search-div">
+                <img src="image/search-interface-symbol.png" alt="" class="search-img">
+                <input  type="search" class="input-search" placeholder="Enter a Github username...">
+                <button class="search-btn" onclick="inputUser()">Search</button>
+            </div>
+            <div class="profile-div">
+                <div class="profile-pic-and-name-div">
+                    <div class="profile-pic-div">
+                        <img src="image/Resume pic.jpg" alt="" class="profile-pic">
+                    </div>
+                    <div class="profile-name-div">
+                        <h2 class="profile-name">User Name</h2>
+                        <a href="" class="user-name">User-id</a>
+                        <p class="join-date">joined 05 May 2020</p>
+                    </div>
+                </div>
+                <div class="bio-div">
+                    <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, similique?</p>
+                </div>
+                <div class="profile-detail">
+                    <div class="repo-div">
+                        <h5 class="repo">Repos</h5>
+                        <div class="repo-no">15</div>
+                    </div>
+                    <div class="follower-div">
+                        <h5 class="followers">Followers</h5>
+                        <div class="followers-no">15</div>
+                    </div>
+                    <div class="following-div">
+                        <h5 class="folowing">Following</h5>
+                        <div class="following-no">15</div>
+                    </div>
+                </div>
+                <div class="contact-div">
+                    <div class="location-div">
+                        <img src="image/location-icon.svg" alt="" class="locatio-icon">
+                        <h5 class="location-name">Not Available</h5>
+                    </div>
+                    <div class="bio-link-div">
+                        <img src="image/website-icon.svg" alt="" class="bio-link-icon">
+                        <a href="" class="bio-link">Not Available</a>
+                    </div>
+                    <div class="twitter-div">
+                        <img src="image/twitter-icon.svg" alt="" class="twitter-icon">
+                        <a href="" class="twitter-link">Not Available</a>
+                    </div>
+                    <div class="company-div">
+                        <img src="image/company-icon.svg" alt="" class="company-icon">
+                        <h5 class="company-name">Not Available</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
+
+
+<!-- <i class="fa fa-instagram"></i> -->
